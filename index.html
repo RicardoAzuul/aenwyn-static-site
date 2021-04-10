@@ -15,18 +15,33 @@
 </head>
 
 <body>
-        <header>
-                <h1>
-                        Aenwyn
-                </h1>
-                <nav class="navbar">
-                        <a href="#lvl-0-spells">Level 0 Spells</a>
-                        <a href="#lvl-1-spells">Level 1 Spells</a>
-                        <a href="#lvl-2-spells">Level 2 Spells</a>
-                        <a href="#spell-tactics">Spell Tactics</a>
-                        <a href="https://i.stack.imgur.com/8HAdV.jpg" target="_blank">Spell AoEs</a>
-                        <a href="#personal-details">Personal Details</a>
-                </nav>
+        <header class="header ">
+                <div class="container-fluid fixed-top">
+                        <div class="row navbar navbar-dark bg-dark">
+                                <div class="col">
+                                        <h1>
+                                                Aenwyn
+                                        </h1>
+                                </div>
+                                <div class="col">
+                                        <nav class="navbar">
+                                                <a href="#">Spellcasting</a>
+                                                <a href="#">Spell Ranges</a>
+                                                <a href="#">Spellcasting Feats</a>
+                                                <a href="#">Suggested Combat Spells</a>
+                                                <a href="#lvl-0-spells">Level 0 Spells</a>
+                                                <a href="#lvl-1-spells">Level 1 Spells</a>
+                                                <a href="#lvl-2-spells">Level 2 Spells</a>
+                                                <a href="#spell-tactics">Spell Tactics</a>
+                                                <a href="https://i.stack.imgur.com/8HAdV.jpg" target="_blank">Spell
+                                                        AoEs</a>
+                                                <a href="#personal-details">Personal Details</a>
+                                        </nav>
+                                </div>
+                        </div>
+                </div>
+
+
         </header>
 
         <section>
@@ -84,11 +99,13 @@
                 <h3>Spellcasting Feats</h3>
                 <ul>
                         <li>
-                                <strong>Cloaked Casting:</strong> +1 to spell DC on spell that targets foe that is denied a Dex bonus to
+                                <strong>Cloaked Casting:</strong> +1 to spell DC on spell that targets foe that is
+                                denied a Dex bonus to
                                 AC: surprised, has not acted yet in combat
                         </li>
                         <li>
-                                <strong>Surprise casting:</strong> when succesfully using Bluff to feint in combat, target is denied DEX
+                                <strong>Surprise casting:</strong> when succesfully using Bluff to feint in combat,
+                                target is denied DEX
                                 bonus to AC for next melee atk you make, or next spell you cast. Must
                                 remain in melee, atk must be made/spell cast on or before your next
                                 turn. Feinting = standard action.
@@ -97,7 +114,8 @@
                                 <strong>Spell Focus (Enchantment):</strong> +1 to spell DC
                         </li>
                         <li>
-                                <strong>Silent Spell:</strong> silent spell is cast with no verbal components. Spells without verbal
+                                <strong>Silent Spell:</strong> silent spell is cast with no verbal components. Spells
+                                without verbal
                                 components are not affected. Spell uses up spell slot one level higher than spell’s
                                 actual level.
                         </li>
@@ -420,35 +438,6 @@
                 </table>
 
                 <h2 id="spell-tactics">Spell Tactics vs specific monster types</h2>
-                <h3>Outsiders</h3>
-                <p>Many outsiders have abilities that bypass illusion magic. Demons, in particular, are bad foes since
-                        many get see invisibility or true seeing. All abominations have true seeing.
-                        Many outsiders also have blindsense or blindsight.
-                        Most outsiders are still susceptible to enchantment spells, and many can still be foiled with
-                        illusion magic.
-
-                </p>
-                <h3>Undead</h3>
-                <p>
-                        Undead are really difficult in that no enchantment spells, sleep, hold, pw:stun, pw:kill,
-                        or whelm spells will work against them. They are immune to all mind-affecting spells, sleep,
-                        paralysis, nonlethal damage, ability damage, stunning, spells with fortitude saves, and death
-                        effects.
-                        Undead can still be tricked by illusion spells, but some intelligent undead also have true
-                        seeing.
-                </p>
-                <h3>
-                        Lycanthropes, Animals, Magical Beasts, some Humanoids
-                </h3>
-                <p>
-                        Many of these monsters have the scent ability, which means that they can smell you from within
-                        30'. Animals are also immune to
-                        language-dependent spells, like suggestion.
-                        For the most part, these monsters are not immune to illusion (except some instances of silent
-                        image for creatures with scent), or enchantments.
-                        Dwarves, elves, etc. Some races have bonuses against enchantments or spells, or are immune to
-                        sleep effects.
-                </p>
                 <h3>Construct</h3>
                 <p>
                         As non-living creatures, constructs are immune to all mind-affecting spells, sleep,
@@ -471,10 +460,30 @@
                         Another outsider, elementals are immune to sleep and paralysis. But they can be enchanted and
                         tricked by illusions.
                 </p>
+                <h3>
+                        Lycanthropes, Animals, Magical Beasts, some Humanoids
+                </h3>
+                <p>
+                        Many of these monsters have the scent ability, which means that they can smell you from within
+                        30'. Animals are also immune to
+                        language-dependent spells, like suggestion.
+                        For the most part, these monsters are not immune to illusion (except some instances of silent
+                        image for creatures with scent), or enchantments.
+                        Dwarves, elves, etc. Some races have bonuses against enchantments or spells, or are immune to
+                        sleep effects.
+                </p>
                 <h3>Ooze</h3>
                 <p>It's immune to all mind-affecting spells, sleep, paralysis, polymorph and
                         stunning. Also since it can't see, it's immune to illusions and visual effect that rely on
                         sight. But oozes aren't immune to illusions that have scent and thermal effects.
+                </p>
+                <h3>Outsiders</h3>
+                <p>Many outsiders have abilities that bypass illusion magic. Demons, in particular, are bad foes since
+                        many get see invisibility or true seeing. All abominations have true seeing.
+                        Many outsiders also have blindsense or blindsight.
+                        Most outsiders are still susceptible to enchantment spells, and many can still be foiled with
+                        illusion magic.
+
                 </p>
                 <h3>Plant</h3>
                 <p>
@@ -482,18 +491,27 @@
                         paralysis, polymorph and stunning. They aren't however immune to visual effects or subdual
                         damage.
                 </p>
-                <h3>Vermin</h3>
-                <p>Another monster that's immune to all mind-affecting spells. Not immune to illusions or subdual
-                        damage. Can't see invisible creatures. Some vermin may have blindsense or blindsight.
-                </p>
                 <h3>Swarm</h3>
                 <p>Like vermin swarms are immune to all mind-affecting spells, unless they have an intelligence and
                         hive mind. They are also immune to targeted spells. They aren't immune to illusions or subdual
                         damage.
                 </p>
+                <h3>Undead</h3>
+                <p>
+                        Undead are really difficult in that no enchantment spells, sleep, hold, pw:stun, pw:kill,
+                        or whelm spells will work against them. They are immune to all mind-affecting spells, sleep,
+                        paralysis, nonlethal damage, ability damage, stunning, spells with fortitude saves, and death
+                        effects.
+                        Undead can still be tricked by illusion spells, but some intelligent undead also have true
+                        seeing.
+                </p>
+                <h3>Vermin</h3>
+                <p>Another monster that's immune to all mind-affecting spells. Not immune to illusions or subdual
+                        damage. Can't see invisible creatures. Some vermin may have blindsense or blindsight.
+                </p> 
 
                 <h2 id="personal-details">Personal Details</h2>
-                <p>Elven Beguiler 5, height: 5'1'', weight: 112 lb, age: 145</p>                
+                <p>Elven Beguiler 5, height: 5'1'', weight: 112 lb, age: 145</p>
         </section>
 
         <footer>
