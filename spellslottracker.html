@@ -11,32 +11,6 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Spell Slots</title>
-    <script>
-        function addSlot() {
-            if (typeof (Storage) !== "undefined") {
-                if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
-                } else {
-                    localStorage.clickcount = 1;
-                }
-                document.getElementById("result").innerHTML = "Spell slots: " + localStorage.clickcount;
-            } else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-            }
-        }
-        function subtractSlot() {
-            if (typeof (Storage) !== "undefined") {
-                if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount) - 1;
-                } else {
-                    localStorage.clickcount = 1;
-                }
-                document.getElementById("result").innerHTML = "Spell slots: " + localStorage.clickcount;
-            } else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-            }
-        }
-    </script>
 </head>
 
 <body class="container">
@@ -45,6 +19,7 @@
     <p><button onclick="addSlot()" type="button">Add slot</button></p>
     <div id="result"></div>
     <p><button onclick="subtractSlot()" type="button">Subtract slot</button></p>
+    <script src="/js/script.js" type="text/javascript" ></script>
 </body>
 
 </html>
