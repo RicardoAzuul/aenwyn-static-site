@@ -5,7 +5,7 @@ function addSlot() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "Spell slots: " + localStorage.clickcount;
+        document.getElementById("result").innerHTML = localStorage.clickcount;
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
@@ -17,7 +17,7 @@ function subtractSlot() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "Spell slots: " + localStorage.clickcount;
+        document.getElementById("result").innerHTML = localStorage.clickcount;
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
