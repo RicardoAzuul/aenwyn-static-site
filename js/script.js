@@ -7,15 +7,9 @@ TODO:
 
 */
 
-function addSlot() {
+function resetSlots() {
     if (typeof (Storage) !== "undefined") {
-        if (localStorage.getItem('lvl-0-spellslots')) {
-            let tempNumber = parseInt(localStorage.getItem('lvl-0-spellslots'));
-            tempNumber++;
-            localStorage.setItem('lvl-0-spellslots', tempNumber);
-        } else {
-            localStorage.setItem('lvl-0-spellslots', 6);
-        }
+        localStorage.setItem('lvl-0-spellslots', 6);
         document.getElementById("slots-left").innerHTML = localStorage.getItem('lvl-0-spellslots');
     } else {
         document.getElementById("slots-left").innerHTML = "Sorry, your browser does not support web storage...";
@@ -25,8 +19,14 @@ function subtractSlot() {
     if (typeof (Storage) !== "undefined") {
         if (localStorage.getItem('lvl-0-spellslots')) {
             let tempNumber = parseInt(localStorage.getItem('lvl-0-spellslots'));
-            tempNumber--;
-            localStorage.setItem('lvl-0-spellslots', tempNumber);
+            if (tempNumber === 0) {
+                return;
+            }
+            else {
+                tempNumber--;
+                localStorage.setItem('lvl-0-spellslots', tempNumber);
+            }
+
         } else {
             localStorage.setItem('lvl-0-spellslots', 6);
         }
