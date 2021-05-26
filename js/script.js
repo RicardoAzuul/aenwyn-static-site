@@ -5,7 +5,11 @@ TODO:
 - if the name/value pair doesn't exist, set it equal to the total spell slots
 - if it does exist, read the value and put it into the HTML 
 
-*/
+*/ 
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("slots-left").innerHTML = localStorage.getItem('lvl-0-spellslots');
+  });
 
 function resetSlots() {
     if (typeof (Storage) !== "undefined") {
@@ -15,6 +19,7 @@ function resetSlots() {
         document.getElementById("slots-left").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+
 function subtractSlot() {
     if (typeof (Storage) !== "undefined") {
         if (localStorage.getItem('lvl-0-spellslots')) {
@@ -26,7 +31,6 @@ function subtractSlot() {
                 tempNumber--;
                 localStorage.setItem('lvl-0-spellslots', tempNumber);
             }
-
         } else {
             localStorage.setItem('lvl-0-spellslots', 6);
         }
