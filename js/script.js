@@ -8,15 +8,20 @@ TODO:
 */ 
 
 document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("slots-left").innerHTML = localStorage.getItem('lvl-0-spellslots');
+    let spellSlotCounter = document.getElementsByClassName("spell-slot-counter"); // returns an array with a length of 1
+    nameInLocalStorage = spellSlotCounter[0].id;
+    if (localStorage.getItem(nameInLocalStorage)) { 
+        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
+    }
   });
 
+// the element we want to write to: <td class="spell-slot-counter" id="lvl-0-spellslots"></td>  
 function resetSlots() {
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem('lvl-0-spellslots', 6);
-        document.getElementById("slots-left").innerHTML = localStorage.getItem('lvl-0-spellslots');
+        document.getElementById("lvl-0-spellslots").innerHTML = localStorage.getItem('lvl-0-spellslots');
     } else {
-        document.getElementById("slots-left").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("lvl-0-spellslots").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
 
@@ -34,8 +39,8 @@ function subtractSlot() {
         } else {
             localStorage.setItem('lvl-0-spellslots', 6);
         }
-        document.getElementById("slots-left").innerHTML = localStorage.getItem('lvl-0-spellslots');
+        document.getElementById("lvl-0-spellslots").innerHTML = localStorage.getItem('lvl-0-spellslots');
     } else {
-        document.getElementById("slots-left").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("lvl-0-spellslots").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
