@@ -13,34 +13,42 @@ document.addEventListener("DOMContentLoaded", function(){
     if (localStorage.getItem(nameInLocalStorage)) { 
         document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
     }
+    else {
+        let totalSpellSlots = document.getElementById("total-spell-slots");
+        console.log(totalSpellSlots);
+    }
   });
 
 // the element we want to write to: <td class="spell-slot-counter" id="lvl-0-spellslots"></td>  
 function resetSlots() {
     if (typeof (Storage) !== "undefined") {
-        localStorage.setItem('lvl-0-spellslots', 6);
-        document.getElementById("lvl-0-spellslots").innerHTML = localStorage.getItem('lvl-0-spellslots');
+        let spellSlotCounter = document.getElementsByClassName("spell-slot-counter"); // returns an array with a length of 1
+        nameInLocalStorage = spellSlotCounter[0].id; //we set this to the id of the element we retrieved, for use as the name in the name/value pair for localStorage
+        localStorage.setItem(nameInLocalStorage, 6);
+        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
-        document.getElementById("lvl-0-spellslots").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
 
 function subtractSlot() {
     if (typeof (Storage) !== "undefined") {
-        if (localStorage.getItem('lvl-0-spellslots')) {
-            let tempNumber = parseInt(localStorage.getItem('lvl-0-spellslots'));
+        let spellSlotCounter = document.getElementsByClassName("spell-slot-counter");
+        nameInLocalStorage = spellSlotCounter[0].id;
+        if (localStorage.getItem(nameInLocalStorage)) {
+            let tempNumber = parseInt(localStorage.getItem(nameInLocalStorage));
             if (tempNumber === 0) {
                 return;
             }
             else {
                 tempNumber--;
-                localStorage.setItem('lvl-0-spellslots', tempNumber);
+                localStorage.setItem(nameInLocalStorage, tempNumber);
             }
         } else {
-            localStorage.setItem('lvl-0-spellslots', 6);
+            localStorage.setItem(nameInLocalStorage, 6);
         }
-        document.getElementById("lvl-0-spellslots").innerHTML = localStorage.getItem('lvl-0-spellslots');
+        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
-        document.getElementById("lvl-0-spellslots").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
