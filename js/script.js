@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     else {
         let totalSpellSlots = document.getElementById("total-spell-slots");
-        console.log(totalSpellSlots);
+        let valueInLocalStorage = parseInt(totalSpellSlots.innerText);
+        localStorage.setItem(nameInLocalStorage, valueInLocalStorage);
     }
   });
 
@@ -24,7 +25,7 @@ function resetSlots() {
     if (typeof (Storage) !== "undefined") {
         let spellSlotCounter = document.getElementsByClassName("spell-slot-counter"); // returns an array with a length of 1
         nameInLocalStorage = spellSlotCounter[0].id; //we set this to the id of the element we retrieved, for use as the name in the name/value pair for localStorage
-        localStorage.setItem(nameInLocalStorage, 6);
+        localStorage.setItem(nameInLocalStorage, 6); // TODO: this needs to be set to the value of the element with id total-spell-slots
         document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
         document.getElementsByClassName("spell-slot-counter")[0].innerHTML = "Sorry, your browser does not support web storage...";
@@ -45,7 +46,7 @@ function subtractSlot() {
                 localStorage.setItem(nameInLocalStorage, tempNumber);
             }
         } else {
-            localStorage.setItem(nameInLocalStorage, 6);
+            localStorage.setItem(nameInLocalStorage, 6); // TODO: remove once the fuction that runs on DOMLoaded sets the localstorage name/value pair if it doesn't yet exist
         }
         document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
