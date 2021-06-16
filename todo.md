@@ -1,4 +1,4 @@
-[ ] Add skills.html
+[x] Add skills.html
 [ ] Add combat.html: attacks, saves, AC, HP, speed
 [x] Add lvl-3-spells.html --> include spell schools
 [x] Add spellcard for Legion of Sentinels (not all info in SRD)
