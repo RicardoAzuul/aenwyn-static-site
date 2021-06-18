@@ -29,7 +29,7 @@ function subtractSlot() {
         let spellSlotCounter = document.getElementsByClassName("spell-slot-counter");
         nameInLocalStorage = spellSlotCounter[0].id;
         let tempNumber = parseInt(localStorage.getItem(nameInLocalStorage));
-        if (tempNumber === 0) {
+        if (tempNumber === 0) { // there is no negative spellslots, so just do nothing at 0
             return;
         }
         else {
