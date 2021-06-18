@@ -5,5 +5,6 @@
 [x] Add spellcard for Deep Slumber: doesn't work properly
 [x] Add spellcard for clairaudience/clairvoyance: doesn't work properly
 [x] Add feat for reaching lvl 6 --> Spell Focus: Illusions
-[ ] Add magic items
-[ ] Put navbar in it's own html page, then use JQuery or JavaScript to load it.
+[x] Add magic items
+[ ] Add way to track HP in app
+[ ] Put all spells on one page? Highest lvl first?
