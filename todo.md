@@ -8,3 +8,4 @@
 [x] Add magic items
 [ ] Add way to track HP in app
 [ ] Put all spells on one page? Highest lvl first?
+[ ] Make cards to hand out for Haste and Enlarge Person
