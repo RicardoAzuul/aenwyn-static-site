@@ -6,6 +6,8 @@
 [x] Add spellcard for clairaudience/clairvoyance: doesn't work properly
 [x] Add feat for reaching lvl 6 --> Spell Focus: Illusions
 [x] Add magic items
+[ ] Rearrange layout of skills: the skill name needs to be bold, the attribute that modifies it is least important.
 [ ] Add way to track HP in app
 [ ] Put all spells on one page? Highest lvl first?
 [ ] Make cards to hand out for Haste and Enlarge Person
+[ ] Make card for Legion of Sentinels, or just one Sentinel
