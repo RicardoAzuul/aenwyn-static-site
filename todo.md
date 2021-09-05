@@ -10,6 +10,5 @@
   Nothing of interest in Complete Mage
 
   Spell Compendium:
-  Regal Procession
-  SERVANT HORDE
+  
 
