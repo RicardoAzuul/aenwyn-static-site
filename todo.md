@@ -1,4 +1,15 @@
-[x] Remove skills page: works better on paper
-[x] Remove combat page: works better on paper
 [x] Update char sheet
-[ ] Add Visionary Seeker features to webpage
+[x] Add lvl 4 spells to navbar
+[] Prep monsters to summon
+
+[ ] Shadow conjuration --> mainly utility: conj creation or conj summoning
+
+  - 
+
+ 
+  Nothing of interest in Complete Mage
+
+  Spell Compendium:
+  Regal Procession
+  SERVANT HORDE
+
