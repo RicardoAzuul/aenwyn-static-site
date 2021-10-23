@@ -6,6 +6,6 @@
 [x] Add Cloaked Casting
 [x] Add more spell slots
 [x] Adjust spell ranges
-[ ] Pick Feat
+[x] Pick Feat --> Unsettling Enchantment, Greater Spell Focus?
   
 
