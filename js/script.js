@@ -1,33 +1,38 @@
+// TODO: Change code to allow for having all spells on one page.
 document.addEventListener("DOMContentLoaded", function () {
-    let spellSlotCounter = document.getElementsByClassName("spell-slot-counter"); // returns an array with a length of 1
-    nameInLocalStorage = spellSlotCounter[0].id;
-    if (localStorage.getItem(nameInLocalStorage)) {
-        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
-    }
-    else {
-        let totalSpellSlots = document.getElementById("total-spell-slots");
-        let valueInLocalStorage = parseInt(totalSpellSlots.innerText);
-        localStorage.setItem(nameInLocalStorage, valueInLocalStorage);
-    }
+    let spellSlotCounters = [];
+    spellSlotCounters = document.getElementsByClassName("spell-slot-counter");
+    for (let i = 0; i < spellSlotCounters.length; i++) {
+        nameInLocalStorage = spellSlotCounters[i].id;
+        if (localStorage.getItem(nameInLocalStorage)) {
+            document.getElementById(spellSlotCounters[i].id).innerHTML = localStorage.getItem(nameInLocalStorage);
+        }
+        else {
+            let targetId = "total-" + spellSlotCounters[i].id
+            let totalSpellSlots = document.getElementById(targetId);
+            let valueInLocalStorage = parseInt(totalSpellSlots.innerText);
+            localStorage.setItem(nameInLocalStorage, valueInLocalStorage);
+        }
+    };
 });
 
-function resetSlots() {
+function resetSlots(clicked_id) {
     if (typeof (Storage) !== "undefined") {
-        let spellSlotCounter = document.getElementsByClassName("spell-slot-counter"); // returns an array with a length of 1
-        nameInLocalStorage = spellSlotCounter[0].id; //we set this to the id of the element we retrieved, for use as the name in the name/value pair for localStorage
-        let totalSpellSlots = document.getElementById("total-spell-slots");
+        let targetId = clicked_id.slice(0, -6);; 
+        nameInLocalStorage = targetId; 
+        let totalSpellSlots = document.getElementById("total-" + targetId);
         let valueInLocalStorage = parseInt(totalSpellSlots.innerText);
         localStorage.setItem(nameInLocalStorage, valueInLocalStorage);
-        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
+        document.getElementById(targetId).innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
-        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById(targetId).innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
 
-function subtractSlot() {
+function subtractSlot(clicked_id) {
     if (typeof (Storage) !== "undefined") {
-        let spellSlotCounter = document.getElementsByClassName("spell-slot-counter");
-        nameInLocalStorage = spellSlotCounter[0].id;
+        let targetId = clicked_id.slice(0, -9); 
+        nameInLocalStorage = targetId;
         let tempNumber = parseInt(localStorage.getItem(nameInLocalStorage));
         if (tempNumber === 0) { // there is no negative spellslots, so just do nothing at 0
             return;
@@ -36,8 +41,8 @@ function subtractSlot() {
             tempNumber--;
             localStorage.setItem(nameInLocalStorage, tempNumber);
         }
-        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = localStorage.getItem(nameInLocalStorage);
+        document.getElementById(targetId).innerHTML = localStorage.getItem(nameInLocalStorage);
     } else {
-        document.getElementsByClassName("spell-slot-counter")[0].innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById(targetId).innerHTML = "Sorry, your browser does not support web storage...";
     }
 }

@@ -36,34 +36,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="spells.html">Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-5-spells.html">Level 5 Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-4-spells.html">Level 4 Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-3-spells.html">Level 3 Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-2-spells.html">Level 2 Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-1-spells.html">Level 1 Spells</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lvl-0-spells.html">Level 0 Spells</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="spelltactics.html">Spell Tactics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://i.stack.imgur.com/8HAdV.jpg" target="_blank">Spell
                             AoEs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="handy-haversack.html">Handy Haversack</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://locrian-sumac-f10.notion.site/81bdd7a4f5a6476381226c925dfe5843?v=2abbf470380842f6a136a824958d9f8a"
@@ -103,7 +82,7 @@
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-5-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-5-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -111,8 +90,8 @@
             </tr>
         </table>
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-5-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-5-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h3 id="spell-ranges">Spell Ranges</h3>
@@ -218,7 +197,7 @@
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-4-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-4-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -226,8 +205,8 @@
             </tr>
         </table>
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-4-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-4-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h3 id="spell-ranges">Spell Ranges</h3>
@@ -383,7 +362,7 @@
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-3-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-3-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -391,8 +370,8 @@
             </tr>
         </table>
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-3-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-3-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h3 id="spell-ranges">Spell Ranges</h3>
@@ -543,7 +522,7 @@
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-2-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-2-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -551,8 +530,8 @@
             </tr>
         </table>
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-2-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-2-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h3 id="spell-ranges">Spell Ranges</h3>
@@ -719,11 +698,11 @@
             </tr>
             <tr>
                 <td>Total</td>
-                <td id="total-lv-1-spell-slots">8</td>
+                <td id="total-lvl-1-spell-slots">8</td>
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-1-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-1-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -731,8 +710,8 @@
             </tr>
         </table>
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-1-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-1-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h3 id="spell-ranges">Spell Ranges</h3>
@@ -874,7 +853,7 @@
             </tr>
             <tr>
                 <td>Slots left</td>
-                <td class="spell-slot-counter" id="lvl-0-spellslots"></td>
+                <td class="spell-slot-counter" id="lvl-0-spell-slots"></td>
             </tr>
             <tr>
                 <td>Spell Save DC</td>
@@ -883,8 +862,8 @@
         </table>
 
         <p>
-            <button onclick="resetSlots()" class="btn btn-primary" type="button">Reset</button>
-            <button onclick="subtractSlot()" class="btn btn-primary" type="button">Subtract slot</button>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-0-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-0-spell-slots-subtract">Subtract slot</button>
         </p>
 
         <h2 id="spell-ranges">Spell Ranges</h2>
