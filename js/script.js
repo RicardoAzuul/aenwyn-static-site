@@ -1,4 +1,3 @@
-// TODO: Change code to allow for having all spells on one page.
 document.addEventListener("DOMContentLoaded", function () {
     let spellSlotCounters = [];
     spellSlotCounters = document.getElementsByClassName("spell-slot-counter");
