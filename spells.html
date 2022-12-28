@@ -68,6 +68,106 @@
         <!--/.Navbar-->
     </header>
 
+    <section class="container" id="lvl-7-spells">
+        <h1>Level 7 Spells</h1>
+        <table class="table table-sm">
+            <tr>
+                <th>Spell Lvl</th>
+                <th>Lvl 7</th>
+            </tr>
+            <tr>
+                <td>Bonus Spells</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Spells/Day</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="total-lvl-7-spell-slots">4</td>
+            </tr>
+            <tr>
+                <td>Slots left</td>
+                <td class="spell-slot-counter" id="lvl-7-spell-slots"></td>
+            </tr>
+            <tr>
+                <td>Spell Save DC</td>
+                <td>25</td>
+            </tr>
+        </table>
+        <p>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-7-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-7-spell-slots-subtract">Subtract slot</button>
+        </p>
+
+        <h3 id="spell-ranges">Spell Ranges</h3>
+        <table class="table table-sm">
+            <tr>
+                <td>Close</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>240</td>
+
+            </tr>
+            <tr>
+                <td>Long</td>
+                <td>960</td>
+            </tr>
+        </table>
+        <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
+        <p>** Spells enhanced by Greater Spell Focus: Illu.** --> +2 DC</p>
+        <table class="table table-sm">
+            <tr>
+                <th>Name</th>
+                <th>Range</th>
+                <th>Area/Target/Effect</th>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/arcaneSightGreater.htm" target="_blank">Greater Arcane Sight - Div.</a></td>
+                <td>Personal. DC: 25</td>
+                <td>min/lvl</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/etherealJaunt.htm" target="_blank">Ethereal Jaunt - Trans.</a></td>
+                <td>Personal. DC: 25</td>
+                <td>rnd/lvl</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/holdPersonMass.htm" target="_blank">Mass Hold Person - Ench.**(Compulsion, Mind-Affecting)</a></td>
+                <td>Medium: 240. DC: 27</td>
+                <td>rnd/lvl, 1+ humanoid creatures, no 2 > 30 ft. apart</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/invisibilityMass.htm" target="_blank">Mass Invisibility - Illu.**(Glamer)</a></td>
+                <td>Long. DC: 27</td>
+                <td>Any number of creatures, no 2 > 180 ft. apart</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/phaseDoor.htm" target="_blank">Phase Door - Conj.</a></td>
+                <td>Use/2 lvls</td>
+                <td>Ethereal 5 ft. by 8 ft. opening, 10 ft. deep + 5 ft. deep per three levels</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/powerWordBlind.htm" target="_blank">Power Word Blind - Ench.**(Compulsion, Mind-Affecting)</a></td>
+                <td>Close. DC: 27</td>
+                <td>One creature with 200 hp or less</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/projectImage.htm" target="_blank">Project Image - Illu.**(Shadow)<i class="fas fa-gem"></i></a></td>
+                <td>Medium: 240. DC: 27</td>
+                <td>rnd/lvl</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.d20srd.org/srd/spells/spellTurning.htm" target="_blank">Spell Turning - Abj.</a></td>
+                <td>Personal. DC: 26</td>
+                <td>Until expended or 10 min./lvl</td>
+            </tr>           
+        </table>
+    </section>
+
     <section class="container" id="lvl-6-spells">
         <h1>Level 6 Spells</h1>
         <table class="table table-sm">
@@ -81,11 +181,11 @@
             </tr>
             <tr>
                 <td>Spells/Day</td>
-                <td>4</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td id="total-lvl-6-spell-slots">5</td>
+                <td id="total-lvl-6-spell-slots">6</td>
             </tr>
             <tr>
                 <td>Slots left</td>
@@ -105,16 +205,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -127,17 +227,17 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Dispel%20Magic,%20Greater" target="_blank">Greater Dispel Magic - Abj.</a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>1 spellcaster/creature/object; or 20-ft.-radius burst</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Suggestion,%20Mass" target="_blank">Mass Suggestion - Ench.**(Compulsion, Mind-Affecting)</a></td>
-                <td>Medium: 230. DC: 26</td>
+                <td>Medium: 240. DC: 26</td>
                 <td>One creature/level, no two of which can be more than 30 ft. apart</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Mislead" target="_blank">Mislead - Illu.**<i class="fas fa-brain"></i></a></td>
-                <td>Close: 55. DC: 26</td>
+                <td>Close: 60. DC: 26</td>
                 <td>1 round/level (D) and concentration + 3 rounds</td>
             </tr>
             <tr>
@@ -162,7 +262,7 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Veil" target="_blank">Veil - Illu.** (Glamer)</a></td>
-                <td>Long: 920. DC: 26</td>
+                <td>Long: 960. DC: 26</td>
                 <td>One or more creatures, no two of which can be more than 30 ft. apart</td>
             </tr>           
         </table>
@@ -205,16 +305,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -227,47 +327,47 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Break%20Enchantment" target="_blank">Break Enchantment - Abj.</a></td>
-                <td>Close: 55</td>
+                <td>Close: 60</td>
                 <td>creature/lvl, all within 30 ft. of each other</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Dominate%20Person" target="_blank">Dominate Person - Ench.**</a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>1 humanoid</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Feeblemind" target="_blank">Feeblemind - Ench.**</a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#FRIEND%20TO%20FOE" target="_blank">Friend to Foe - Illu.**</a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Hold%20Monster" target="_blank">Hold Monster - Ench.**</a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 living creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#INCITE%20RIOT" target="_blank">Incite Riot - Ench.**</a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>creature/lvl, no two of which more than 30 ft. apart</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Mind%20Fog" target="_blank">Mind Fog - Ench.**</a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>Fog in 20-ft. radius, 20 ft. high</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Rary's%20Telepathic%20Bond" target="_blank">Rary's Telepathic Bond - Div.</a></td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>You + 1 willing creature/3 lvls, no two of which more than 30 ft. apart</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Seeming" target="_blank">Seeming - Illu.**</a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>creature/2 lvls, no two of which more than 30 ft. apart</td>
             </tr>
             <tr>
@@ -282,12 +382,12 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#BIGBY'S%20STRIKING%20FIST" target="_blank" rel="noopener noreferrer">Bigby's Striking Fist <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://dnd.arkalseif.info/spells/spell-compendium--86/blacklight--3956/" target="_blank" rel="noopener noreferrer">Blacklight <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>20-ft.-radius emanation centered on creature/object/point in space</td>
             </tr>
             <tr>
@@ -297,12 +397,12 @@
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/fireball.htm" target="_blank" rel="noopener noreferrer">Fireball <i class="fas fa-cloud"></i></a></td>
-                <td>Long: 920. DC: 25</td>
+                <td>Long: 960. DC: 25</td>
                 <td>20-ft.-radius spread</td>
             </tr>
             <tr>
                 <td><a href="https://dnd.arkalseif.info/spells/magic-of-faerun--20/force-ladder--1671/" target="_blank" rel="noopener noreferrer">Force Ladder <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>1 min/lvl</td>
             </tr>
             <tr>
@@ -312,37 +412,37 @@
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/resilientSphere.htm" target="_blank" rel="noopener noreferrer">Resilient Sphere <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>1-ft.-diameter/lvl sphere, centered around creature</td>
             </tr>
             <tr>
                 <td><a href="https://dnd.arkalseif.info/spells/spell-compendium--86/sound-lance--3564/" target="_blank" rel="noopener noreferrer">Sound Lance <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/wallOfFire.htm" target="_blank" rel="noopener noreferrer">Wall of Fire <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>Concentration + 1 round/level</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/wallOfIce.htm" target="_blank" rel="noopener noreferrer">Wall of Ice <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>1 min./lvl</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/windWall.htm" target="_blank" rel="noopener noreferrer">Wind Wall <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 25</td>
+                <td>Medium: 240. DC: 25</td>
                 <td>Wall up to 10 ft./lvl long and 5 ft./lvl high</td>
             </tr>
             <tr>
                 <td><a href="https://dndtools.org/spells/draconomicon--92/wingbind--1018/" target="_blank" rel="noopener noreferrer">Wingbind <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 25</td>
+                <td>Close: 60. DC: 25</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#ETHEREALNESS,%20SWIFT" target="_blank">Swift Etherealness - Trans.</a></td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>1 willing creature</td>
             </tr>
         </table>
@@ -385,16 +485,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -407,12 +507,12 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Charm%20Monster" target="_blank">Charm Monster - Ench.**</a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>1 living creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Confusion" target="_blank">Confusion - Ench.**</a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>Creatures in a 15-ft. radius burst</td>
             </tr> 
             <tr>
@@ -442,12 +542,12 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#PHANTOM%20BATTLE" target="_blank">Phantom Battle - Illu.**</a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>20-ft.-radius spread</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Rainbow%20Pattern" target="_blank">Rainbow Pattern - Illu.**<i class="fas fa-brain"></i></a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>20-ft.-radius spread</td>
             </tr>
             <tr>
@@ -457,7 +557,7 @@
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/grease.htm" target="_blank">Grease - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>1 object/10-ft. square</td>
             </tr>
             <tr>
@@ -467,47 +567,47 @@
             </tr>
             <tr>
                 <td><a href="https://dndtools.org/spells/spell-compendium--86/regal-procession--4084/" target="_blank">Regal Procession - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>1 mount/lvl</td>
             </tr>
             <tr>
                 <td><a href="https://dndtools.org/spells/spell-compendium--86/servant-horde--4140/" target="_blank">Servant Horde - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>2d6 + 1/lvl (max + 15) unseen servants</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/sleetStorm.htm" target="_blank">Sleetstorm - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Long: 920. DC: 24</td>
+                <td>Long: 960. DC: 24</td>
                 <td>Cylinder (40-ft. radius, 20 ft. high)</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/stinkingCloud.htm" target="_blank">Stinking Cloud - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>Cloud spreads in 20-ft. radius, 20 ft. high</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/summonMonsterIII.htm"C target="_blank">Summon Monster III - Conj. (Summon) <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>1 or more summoned creatures</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/unseenServant.htm" target="_blank">Unseen Servant - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>One invisible, mindless, shapeless servant</td>
             </tr>
             <tr>
                 <td><a href="https://www.d20srd.org/srd/spells/web.htm" target="_blank">Web - Conj. (Creation) <i class="fas fa-cloud"></i></a></td>
-                <td>Medium: 230. DC: 24</td>
+                <td>Medium: 240. DC: 24</td>
                 <td>Webs in a 20-ft.-radius spread</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Solid%20Fog" target="_blank">Solid Fog - Conj.</a></td>
-                <td>Medium: 230. DC: 22</td>
+                <td>Medium: 240. DC: 22</td>
                 <td>Fog spreads in 20-ft. radius, 20 ft. high</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#WHELM,%20MASS" target="_blank">Mass Whelm - Ench.**</a></td>
-                <td>Close: 55. DC: 24</td>
+                <td>Close: 60. DC: 24</td>
                 <td>One living creature/level</td>
             </tr>
         </table>
@@ -550,16 +650,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -577,7 +677,7 @@
             </tr>
             <tr>
                 <td><a href="clairaudience-clairvoyance.html" target="_blank">Clairaudience/Clairvoyance - Div.</a></td>
-                <td>Long: 920. DC: 21</td>
+                <td>Long: 960. DC: 21</td>
                 <td>Magical sensor</td>
             </tr>
             <tr>
@@ -587,12 +687,12 @@
             </tr>
             <tr>
                 <td><a href="deep-slumber.html" target="_blank">Deep Slumber - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>Like <a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#sleep" target="_blank">Sleep</a> , but puts 10 HD to sleep</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Dispel%20Magic" target="_blank">Dispel Magic - Abju.</a></td>
-                <td>Medium: 230. DC: 21</td>
+                <td>Medium: 240. DC: 21</td>
                 <td>1 spellcaster/creature/object; or 20-ft.-radius burst</td>
             </tr>
             <tr>
@@ -607,22 +707,22 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#HALT" target="_blank">Halt - Trans. </a><i class="fas fa-bolt"></i></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>1 creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Haste" target="_blank">Haste - Trans.</a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>1 creature/lvl, no 2 of which > 30 ft. apart</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#HESITATE" target="_blank">Hesitate - Ench.**(Mind-Affecting) </a><i class="fas fa-bolt"></i></td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>1 living creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Hold%20Person" target="_blank">Hold Person - Ench.**(Mind-Affecting)</a></td>
-                <td>Medium: 230. DC: 23</td>
+                <td>Medium: 240. DC: 23</td>
                 <td>1 humanoid</td>
             </tr>
             <tr>
@@ -637,12 +737,12 @@
             </tr>
             <tr>
                 <td><a href="legion-of-sentinels.html" target="_blank">Legion of Sentinels - Illu.**</a> </td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>10-ft.-radius centered on point in space</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Major%20Image" target="_blank">Major Image - Illu.** (Glamer)</a></td>
-                <td>Long: 920. DC: 23</td>
+                <td>Long: 960. DC: 23</td>
                 <td>Illusion that cannot extend beyond four 10-ft. cubes + one 10-ft. cube/level</td>
             </tr>
             <tr>
@@ -652,17 +752,17 @@
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Slow" target="_blank">Slow - Trans.</a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>1 creature/lvl, no 2 of which > 30 ft. apart</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Suggestion" target="_blank">Suggestion - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 23</td>
+                <td>Close: 60. DC: 23</td>
                 <td>1 living creature</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#VERTIGO%20FIELD" target="_blank">Vertigo Field - Illu.**</a></td>
-                <td>Medium: 230. DC: 23</td>
+                <td>Medium: 240. DC: 23</td>
                 <td>20-ft.-radius</td>
             </tr>
             <tr>
@@ -711,16 +811,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -734,7 +834,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#BLINDING%20COLOR%20SURGE"
                         target="_blank">Blinding Color Surge - Illu.** (Glamer)</a></td>
-                <td>Medium: 230. DC: 22</td>
+                <td>Medium: 240. DC: 22</td>
                 <td>You & 1 creature</td>
             </tr>
             <tr>
@@ -746,7 +846,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Daze%20Monster"
                         target="_blank">Daze Monster - Ench.**(Mind-Affecting)</a></td>
-                <td>Medium: 230. DC: 22</td>
+                <td>Medium: 240. DC: 22</td>
                 <td>1 living creature of =< 6 HD</td>
             </tr>
             <tr>
@@ -760,20 +860,20 @@
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Fog%20Cloud"
                         target="_blank">Fog
                         Cloud - Conj.</a></td>
-                <td>Medium: 230. DC: 20</td>
+                <td>Medium: 240. DC: 20</td>
                 <td>20 ft radius, 20 ft high</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Glitterdust"
                         target="_blank">Glitterdust - Conj.</a></td>
-                <td>Medium: 230. DC: 20</td>
+                <td>Medium: 240. DC: 20</td>
                 <td>Creatures & objects in 10 ft. radius</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Hypnotic%20Pattern"
                         target="_blank"><i class="fas fa-brain"></i> Hypnotic Pattern - Illu.**
                         (Mind-Affecting)</a></td>
-                <td>Medium: 230. DC: 22</td>
+                <td>Medium: 240. DC: 22</td>
                 <td>10 ft. radius</td>
             </tr>
             <tr>
@@ -785,14 +885,14 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Knock"
                         target="_blank">Knock - Trans.</a></td>
-                <td>Medium: 230. DC: 20</td>
+                <td>Medium: 240. DC: 20</td>
                 <td>1 door/box/chest with area of 10 sq. ft/lvl</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Minor%20Image"
                         target="_blank"><i class="fas fa-brain"></i> Minor Image - Illu.**
                         (Figment)</a></td>
-                <td>Long: 920. DC: 22</td>
+                <td>Long: 960. DC: 22</td>
                 <td>Visual figment, four 10-ft. cubes + 10-ft. cube/lvl</td>
             </tr>
             <tr>
@@ -804,7 +904,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Misdirection"
                         target="_blank">Misdirection - Illu.** (Glamer)</a></td>
-                <td>Close: 55. DC: 22</td>
+                <td>Close: 60. DC: 22</td>
                 <td>1 creature/object, up to 10-ft. cube</td>
             </tr>
             <tr>
@@ -816,7 +916,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Silence"
                         target="_blank">Silence - Illu.** (Glamer)</a></td>
-                <td>Long: 920. DC: 22</td>
+                <td>Long: 960. DC: 22</td>
                 <td>20-ft. radius, centered on creature/object/point in space</td>
             </tr>
             <tr>
@@ -829,7 +929,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#STAY%20THE%20HAND"
                         target="_blank">Stay The Hand - Ench.**(Mind-Affecting) </a><i class="fas fa-bolt"></i></td>
-                <td>Medium: 230. DC: 22</td>
+                <td>Medium: 240. DC: 22</td>
                 <td>1 humanoid</td>
             </tr>
             <tr>
@@ -842,7 +942,7 @@
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#VERTIGO"
                         target="_blank">Vertigo - Illu.**</a>
                 </td>
-                <td>Close: 55. DC: 22</td>
+                <td>Close: 60. DC: 22</td>
                 <td>1 living creature</td>
             </tr>
             <tr>
@@ -891,16 +991,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -914,7 +1014,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Charm%20Person"
                         target="_blank">Charm Person - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>1 humanoid</td>
             </tr>
             <tr>
@@ -944,7 +1044,7 @@
             <tr>
                 <td><a href="http://dndtools.org/spells/spell-compendium--86/distract--4403/" target="_blank">Distract -
                         Ench.**(Mind-Affecting)</a></td>
-                <td>Medium: 230. DC: 21</td>
+                <td>Medium: 240. DC: 21</td>
                 <td>1 creature/lvl, no 2 of which more than 30 ft. apart</td>
             </tr>
             <tr>
@@ -956,7 +1056,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Hypnotism"
                         target="_blank">Hypnotism - Ench.**(Mind-Affecting) <i class="fas fa-clock"></i></a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>Several living creatures, no 2 of which more than 30 ft. apart</td>
             </tr>
             <tr>
@@ -974,32 +1074,32 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#ROUSE"
                         target="_blank">Rouse - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>10 ft. radius</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Silent%20Image"
                         target="_blank"><i class="fas fa-brain"></i> Silent Image - Illu.**
                         (Figment)</a></td>
-                <td>Long: 920. DC: 21</td>
+                <td>Long: 960. DC: 21</td>
                 <td>Visual figment, four 10-ft. cubes + 10-ft. cube/lvl</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Sleep"
                         target="_blank">Sleep - Ench.**(Mind-Affecting) <i class="fas fa-clock"></i></a></td>
-                <td>Medium: 230. DC: 21</td>
+                <td>Medium: 240. DC: 21</td>
                 <td>10 ft. radius</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Undetectable%20Alignment"
                         target="_blank">Undetectable Alignment - Abju.</a></td>
-                <td>Close: 55. DC: 19</td>
+                <td>Close: 60. DC: 19</td>
                 <td>1 creature/object</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsphb2.html#WHELM"
                         target="_blank">Whelm - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 21</td>
+                <td>Close: 60. DC: 21</td>
                 <td>1 living creature</td>
             </tr>
         </table>
@@ -1043,16 +1143,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>55</td>
+                <td>60</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>230</td>
+                <td>240</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>920</td>
+                <td>960</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -1066,13 +1166,13 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Dancing%20Lights"
                         target="_blank">Dancing Lights - Evoc.</a></td>
-                <td>Medium: 230. DC: 18</td>
+                <td>Medium: 240. DC: 18</td>
                 <td>Up to four lights, within 10 ft radius</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Daze"
                         target="_blank">Daze - Ench.**(Mind-Affecting)</a></td>
-                <td>Close: 55. DC: 20</td>
+                <td>Close: 60. DC: 20</td>
                 <td>1 humanoid =< 4HD</td>
             </tr>
             <tr>
@@ -1084,7 +1184,7 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Ghost%20Sound"
                         target="_blank">Ghost Sound - Illu.** (Figment)</a></td>
-                <td>Close: 55. DC: 20</td>
+                <td>Close: 60. DC: 20</td>
                 <td>Sounds</td>
             </tr>
             <tr>
@@ -1097,13 +1197,13 @@
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#Message"
                         target="_blank">Message - Trans.</a></td>
-                <td>Medium: 230. DC: 18</td>
+                <td>Medium: 240. DC: 18</td>
                 <td>1 creature/lvl</td>
             </tr>
             <tr>
                 <td><a href="https://srd.dndtools.org/srd/magic/spells/spells/spellsAllCore.html#open-close"
                         target="_blank">Open/Close - Trans.</a></td>
-                <td>Close: 55. DC: 18</td>
+                <td>Close: 60. DC: 18</td>
                 <td>Object of 30 lb or less, portal that be opened/closed</td>
             </tr>
             <tr>
