@@ -68,6 +68,102 @@
         <!--/.Navbar-->
     </header>
 
+    <section class="container" id="lvl-8-spells">
+        <h1>Level 8 Spells</h1>
+        <table class="table table-sm">
+            <tr>
+                <th>Spell Lvl</th>
+                <th>Lvl 8</th>
+            </tr>
+            <tr>
+                <td>Bonus Spells</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Spells/Day</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="total-lvl-8-spell-slots">4</td>
+            </tr>
+            <tr>
+                <td>Slots left</td>
+                <td class="spell-slot-counter" id="lvl-8-spell-slots"></td>
+            </tr>
+            <tr>
+                <td>Spell Save DC</td>
+                <td>26</td>
+            </tr>
+        </table>
+        <p>
+            <button onclick="resetSlots(this.id)" class="btn btn-primary" type="button" id="lvl-8-spell-slots-reset">Reset</button>
+            <button onclick="subtractSlot(this.id)" class="btn btn-primary" type="button" id="lvl-8-spell-slots-subtract">Subtract slot</button>
+        </p>
+
+        <h3 id="spell-ranges">Spell Ranges</h3>
+        <table class="table table-sm">
+            <tr>
+                <td>Close</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>260</td>
+
+            </tr>
+            <tr>
+                <td>Long</td>
+                <td>1040</td>
+            </tr>
+        </table>
+        <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
+        <p>** Spells enhanced by Greater Spell Focus: Illu.** --> +2 DC</p>
+        <p>Third Eye: Penetrate --> +2 on spellcaster checks for spell resistance</p>
+        <table class="table table-sm">
+            <tr>
+                <th>Name</th>
+                <th>Range</th>
+                <th>Area/Target/Effect</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>           
+        </table>
+    </section>
+
     <section class="container" id="lvl-7-spells">
         <h1>Level 7 Spells</h1>
         <table class="table table-sm">
@@ -105,16 +201,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -206,16 +302,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -307,16 +403,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -488,16 +584,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -654,16 +750,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -816,16 +912,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -997,16 +1093,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
@@ -1150,16 +1246,16 @@
         <table class="table table-sm">
             <tr>
                 <td>Close</td>
-                <td>60</td>
+                <td>65</td>
             </tr>
             <tr>
                 <td>Medium</td>
-                <td>250</td>
+                <td>260</td>
 
             </tr>
             <tr>
                 <td>Long</td>
-                <td>1000</td>
+                <td>1040</td>
             </tr>
         </table>
         <p>** Spells enhanced by Greater Spell Focus: Ench.** --> +2 DC</p>
